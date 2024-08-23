@@ -1,19 +1,24 @@
 # ComfyUI-PromptList
-ComfyUI-PromptListは、ComfyUI用のカスタムノードで、プロンプトの管理とCSVファイルとの連携を容易にします。
+ComfyUI-PromptListは、ComfyUI用のカスタムノードで、プロンプトの管理とYAMLファイルとの連携を容易にします。
 
 ## 機能
 
-- CSVファイルからプロンプトを読み込み、ポジティブプロンプトとネガティブプロンプトをそれぞれString形式で出力します。
-- 新しいプロンプトをCSVへ書き込む
+- prompts.yamlからプロンプトを読み込み、ポジティブプロンプトとネガティブプロンプトをそれぞれString形式で出力します。
+- 新しいプロンプトをyamlへ書き込む
 - 既存のプロンプトの修正
 
 ## インストール
+[ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager)をインストールしている場合
+1. メインメニューのManager -> Install via Git URLの順にクリックする
+2. https://github.com/yourusername/ComfyUI-PromptList.git
+   このURLを貼り付けてOKを押す
+3. インストールが完了したら、ComfyUIを再起動
 
-ComfyUIのカスタムノードディレクトリに移動します（通常は ComfyUI/custom_nodes/）。
-このリポジトリをクローンします：
-Copygit clone https://github.com/yourusername/ComfyUI-PromptList.git
-
-ComfyUIを再起動します。
+ComfyUI-Managerをインストールしていない場合
+1. ComfyUIのカスタムノードディレクトリに移動します。（通常は ComfyUI/custom_nodes/）
+2. このリポジトリをクローンします。  
+git clone https://github.com/yourusername/ComfyUI-PromptList.git
+3. ComfyUIを再起動します。
 
 ## 使用方法
 
