@@ -22,7 +22,7 @@ git clone https://github.com/yourusername/ComfyUI-PromptList.git
 
 ## 使用方法
 ![node](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/node1.png)  
-ワークスペース上で右クリック -> Add node-> promt -> Prompt Listでノードを追加します。  
+ワークスペース上で右クリック -> Add node-> prompt -> Prompt Listでノードを追加します。  
   
 ノードには以下の入力があります：  
 selection: prompts.yamlに登録されているプロンプトリスト、選択した項目のプロンプトを出力します。  
