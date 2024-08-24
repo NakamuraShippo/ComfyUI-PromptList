@@ -1,5 +1,6 @@
 # ComfyUI-PromptList
-ComfyUI-PromptListは、ComfyUI用のカスタムノードで、プロンプトの管理とYAMLファイルとの連携を容易にします。
+ComfyUI-PromptListは、ComfyUIのカスタムノード  
+prompts.yamlに記録したプロンプトを出力するシンプルなプロンプト管理ノードです。
 
 ## 機能
 
@@ -47,4 +48,5 @@ Negative Prompt: ネガティブプロンプトの内容
 バグレポートや機能リクエストは、連絡が取れる手段であれば何でも構いません。
 プルリクエストも歓迎します。
 
+## 連絡先
 [NakamuraShippo](https://lit.link/admin/creator)
