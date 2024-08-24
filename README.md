@@ -33,12 +33,23 @@ Positive Prompt: ポジティブプロンプトの内容
 Negative Prompt: ネガティブプロンプトの内容  
   
 入力したプロンプト名とプロンプトはprompts.yamlに保存されます。  
-また、同名のPrompt Nameを使用してプロンプトを変更した場合はprompts.yaml内のプロンプトを上書きします。  
+また、同名のPrompt Nameを使用してプロンプトを変更した場合はprompts.yaml内のプロンプトを上書きします。 
 
+### prompts.yamlのフォーマット  
+~~~prompts.yaml
+test:
+  positive: positive prompt
+  negative: negative prompt
+...
+~~~
+   
 ## 注意事項
 
 プロンプトリストはprompts.yamlファイルに保存されます。
 編集したり新しいプロンプトを追加または編集を行った場合、変更を反映させる為にComfyUIのメインメニューにあるRefreshを押してください。
+
+## アップデート履歴
+2024/08/24 見切り発車
 
 ## ライセンス
 このプロジェクトはMITライセンスの下で公開されています。
