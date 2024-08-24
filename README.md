@@ -5,7 +5,7 @@ ComfyUI-PromptListは、ComfyUI用のカスタムノードで、プロンプト�
 
 - prompts.yamlからプロンプトを読み込み、ポジティブプロンプトとネガティブプロンプトをそれぞれString形式で出力します。
 - 新しいプロンプトをyamlへ書き込む
-- 既存のプロンプトの修正
+- yamlに登録されているプロンプトの修正
 
 ## インストール
 [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager)をインストールしている場合
@@ -21,18 +21,19 @@ git clone https://github.com/yourusername/ComfyUI-PromptList.git
 3. ComfyUIを再起動します。
 
 ## 使用方法
-
-ComfyUIワークスペースにComfyUI-PromptListノードを追加します。
-ノードには以下の入力があります：
-
-selection: prompts.yamlのプロンプトリスト  
+![node](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/node1.png)  
+ワークスペース上で右クリック -> Add node-> promt -> Prompt Listでノードを追加します。  
   
-以下の項目に入力されている場合はselectionのプロンプトは出力されずにこちらのプロンプトが出力されます。  
+ノードには以下の入力があります：  
+selection: prompts.yamlに登録されているプロンプトリスト、選択した項目のプロンプトを出力します。  
+  
+以下の項目に入力されている場合はselectionのプロンプトは出力されずに入力したプロンプトが出力されます。  
 Prompt Name: 新しいプロンプト名または更新するプロンプト名  
 Positive Prompt: ポジティブプロンプトの内容  
 Negative Prompt: ネガティブプロンプトの内容  
   
-また、入力したプロンプト名とプロンプトはprompts.yamlに保存されます。  
+入力したプロンプト名とプロンプトはprompts.yamlに保存されます。  
+また、同名のPrompt Nameを使用してプロンプトを変更した場合はprompts.yaml内のプロンプトを上書きします。  
 
 ## 注意事項
 
