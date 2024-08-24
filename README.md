@@ -1,62 +1,60 @@
 # ComfyUI-PromptList
-ComfyUI-PromptListは、[ComfyUI](https://github.com/comfyanonymous/ComfyUI)用のprompts.yamlに記録したプロンプトを出力するシンプルなプロンプト管理ノードです。
+ComfyUI-PromptList is a simple prompt management node for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) that outputs prompts recorded in prompts.yaml.
 
-## 機能
+## Features
+- Reads prompts from prompts.yaml and outputs positive and negative prompts as String format.
+- Writes new prompts to yaml.
+- Modifies prompts registered in yaml.
 
-- prompts.yamlからプロンプトを読み込み、ポジティブプロンプトとネガティブプロンプトをそれぞれString形式で出力します。
-- 新しいプロンプトをyamlへ書き込む
-- yamlに登録されているプロンプトの修正
-
-## インストール
-[ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager)をインストールしている場合
-1. メインメニューのManager -> Install via Git URLの順にクリックする
-2. ウインドウ上部に出てくるテキストボックスにURLを貼り付けてOKを押す  
+## Installation
+If you have installed [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager):
+1. Click Manager -> Install via Git URL in the main menu.
+2. Paste the URL into the text box that appears at the top of the window and press OK.  
    https://github.com/yourusername/ComfyUI-PromptList.git
-3. インストールが完了したら、ComfyUIを再起動
+3. After installation is complete, restart ComfyUI.
 
-[ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager)をインストールしていない場合
-1. ComfyUIのカスタムノードディレクトリに移動します。（通常は ComfyUI/custom_nodes/）
-2. このリポジトリをクローンします。  
-git clone https://github.com/yourusername/ComfyUI-PromptList.git
-3. ComfyUIを再起動します。
+If you have not installed [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager):
+1. Navigate to ComfyUI's custom node directory. (Usually ComfyUI/custom_nodes/)
+2. Clone this repository.  
+   git clone https://github.com/yourusername/ComfyUI-PromptList.git
+3. Restart ComfyUI.
 
-## 使用方法
+## Usage
 ![node](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/node1.png)  
-ワークスペース上で右クリック -> Add node-> prompt -> Prompt Listでノードを追加します。  
+Right-click on the workspace -> Add node -> prompt -> Prompt List to add the node.  
   
-ノードには以下の入力があります：  
-selection: prompts.yamlに登録されているプロンプトリスト、選択した項目のプロンプトを出力します。  
+The node has the following inputs:  
+selection: List of prompts registered in prompts.yaml, outputs the prompt of the selected item.  
   
-以下の項目に入力されている場合はselectionのプロンプトは出力されずに入力したプロンプトが出力されます。  
-Prompt Name: 新しいプロンプト名または更新するプロンプト名  
-Positive Prompt: ポジティブプロンプトの内容  
-Negative Prompt: ネガティブプロンプトの内容  
+If the following items are filled, the prompt from selection will not be output, instead the input prompt will be output:  
+Prompt Name: New prompt name or name of prompt to update  
+Positive Prompt: Content of positive prompt  
+Negative Prompt: Content of negative prompt  
   
-入力したプロンプト名とプロンプトはprompts.yamlに保存されます。  
-また、同名のPrompt Nameを使用してプロンプトを変更した場合はprompts.yaml内のプロンプトを上書きします。 
+The input prompt name and prompts are saved in prompts.yaml.  
+Also, if you change the prompt using the same Prompt Name, it will overwrite the prompt in prompts.yaml.
 
-### prompts.yamlのフォーマット  
-~~~prompts.yaml
+### prompts.yaml format  
+```yaml
 test:
   positive: positive prompt
   negative: negative prompt
 ...
-~~~
+```
    
-## 注意事項
+## Notes
+The prompt list is saved in the prompts.yaml file.
+If you edit, add new prompts, or make changes, please press Refresh in ComfyUI's main menu to reflect the changes.
 
-プロンプトリストはprompts.yamlファイルに保存されます。
-編集したり新しいプロンプトを追加または編集を行った場合、変更を反映させる為にComfyUIのメインメニューにあるRefreshを押してください。
+## Update History
+2024/08/24 Initial release as it's working for now
 
-## アップデート履歴
-2024/08/24 とりあえず動いてるので公開
+## License
+This project is released under the MIT License.
 
-## ライセンス
-このプロジェクトはMITライセンスの下で公開されています。
+## Other
+Bug reports and feature requests are welcome through any available contact method.
+Pull requests are also welcome.
 
-## その他
-バグレポートや機能リクエストは、連絡が取れる手段であれば何でも構いません。
-プルリクエストも歓迎します。
-
-## 連絡先
+## Contact
 [NakamuraShippo](https://lit.link/admin/creator)
