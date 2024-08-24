@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-promptlist"
+description = "Custom node for managing prompts with CSV integration"
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/NakamuraShippo/ComfyUI-PromptList"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-PromptList"
+Icon = ""
