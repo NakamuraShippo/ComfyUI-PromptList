@@ -16,7 +16,7 @@ If you have installed [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Mana
 If you have not installed [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager):
 1. Navigate to ComfyUI's custom node directory. (Usually ComfyUI/custom_nodes/)
 2. Clone this repository.  
-   git clone https://github.com/yourusername/ComfyUI-PromptList.git
+`git clone https://github.com/yourusername/ComfyUI-PromptList.git`
 3. Restart ComfyUI.
 
 ## Usage
