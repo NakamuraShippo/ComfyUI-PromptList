@@ -1,0 +1,9 @@
+test:
+  positive: posiposi
+  negative: neganega
+test prompt:
+  positive: 1girl2
+  negative: NSFW
+test prompt2:
+  positive: 1girl2
+  negative: NSFW

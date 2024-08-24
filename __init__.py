@@ -1,7 +1,7 @@
 """
-@author: NakamuraShippo
+@author: Assistant
 @title: ComfyUI-PromptList
-@description: Custom node to manage prompts in CSV
+@description: Custom node for managing prompts with CSV integration
 """
 
 from .ComfyUI_PromptList import ComfyUI_PromptList

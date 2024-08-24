@@ -1,33 +1,35 @@
-import csv
+import yaml
 import os
 import folder_paths
+from collections import OrderedDict
+
+# カスタムYAMLローダーとダンパーを定義
+class OrderedLoader(yaml.SafeLoader):
+    pass
+
+class OrderedDumper(yaml.SafeDumper):
+    pass
+
+def dict_constructor(loader, node):
+    return OrderedDict(loader.construct_pairs(node))
+
+OrderedLoader.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, dict_constructor)
+
+def dict_representer(dumper, data):
+    return dumper.represent_mapping(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, data.items())
+
+OrderedDumper.add_representer(OrderedDict, dict_representer)
 
 class ComfyUI_PromptList:
     def __init__(self):
-        self.csv_path = os.path.join(folder_paths.base_path, "custom_nodes", "ComfyUI-PromptList", "list.csv")
-        self.data = self.load_csv()
-
-    def load_csv(self):
-        data = []
-        if os.path.exists(self.csv_path):
-            with open(self.csv_path, 'r', newline='', encoding='utf-8') as file:
-                reader = csv.reader(file)
-                data = list(reader)
-        return data
-
-    def save_csv(self):
-        with open(self.csv_path, 'w', newline='', encoding='utf-8') as file:
-            writer = csv.writer(file)
-            writer.writerows(self.data)
+        self.yaml_path = os.path.join(folder_paths.base_path, "custom_nodes", "ComfyUI-PromptList", "prompts.yaml")
+        self.data = self.load_yaml()
 
     @classmethod
     def INPUT_TYPES(cls):
-        instance = cls()
-        items = [row[0] for row in instance.data]
-        unique_items = list(dict.fromkeys(items))  # Remove duplicates while preserving order
         return {
             "required": {
-                "selection": (unique_items,),
+                "selection": (cls.get_prompt_list(),),
                 "Prompt Name": ("STRING", {"default": ""}),
                 "Positive Prompt": ("STRING", {"default": ""}),
                 "Negative Prompt": ("STRING", {"default": ""}),
@@ -39,44 +41,55 @@ class ComfyUI_PromptList:
     FUNCTION = "process"
     CATEGORY = "prompt"
 
+    def load_yaml(self):
+        if os.path.exists(self.yaml_path):
+            with open(self.yaml_path, 'r', encoding='utf-8') as file:
+                return yaml.load(file, Loader=OrderedLoader) or OrderedDict()
+        return OrderedDict()
+
+    def save_yaml(self):
+        with open(self.yaml_path, 'w', encoding='utf-8') as file:
+            yaml.dump(self.data, file, Dumper=OrderedDumper, allow_unicode=True)
+
+    @classmethod
+    def get_prompt_list(cls):
+        instance = cls()
+        return list(instance.data.keys())
+
     def process(self, selection, **kwargs):
         prompt_name = kwargs.get("Prompt Name", "")
         positive_prompt = kwargs.get("Positive Prompt", "")
         negative_prompt = kwargs.get("Negative Prompt", "")
 
         if prompt_name and positive_prompt and negative_prompt:
-            # Check if the prompt name already exists
-            for i, row in enumerate(self.data):
-                if row[0] == prompt_name:
-                    # Update existing entry
-                    self.data[i] = [prompt_name, positive_prompt, negative_prompt]
-                    break
+            # Update or add new prompt while preserving order
+            if prompt_name in self.data:
+                self.data[prompt_name]["positive"] = positive_prompt
+                self.data[prompt_name]["negative"] = negative_prompt
             else:
-                # Add new entry if not found
-                self.data.append([prompt_name, positive_prompt, negative_prompt])
-            self.save_csv()
+                self.data[prompt_name] = OrderedDict([
+                    ("positive", positive_prompt),
+                    ("negative", negative_prompt)
+                ])
+            self.save_yaml()
             return (positive_prompt, negative_prompt)
         elif selection:
-            # Return existing item from CSV
-            for row in self.data:
-                if row[0] == selection:
-                    return (row[1], row[2])
+            # Return existing prompt from YAML
+            prompt = self.data.get(selection, {})
+            return (prompt.get("positive", ""), prompt.get("negative", ""))
         
         # Default return if no selection or custom input
         return ("", "")
 
-def update_node():
-    instance = ComfyUI_PromptList()
-    items = [row[0] for row in instance.data]
-    unique_items = list(dict.fromkeys(items))
-    ComfyUI_PromptList.INPUT_TYPES = lambda: {
-        "required": {
-            "selection": (unique_items,),
-            "Prompt Name": ("STRING", {"default": ""}),
-            "Positive Prompt": ("STRING", {"default": ""}),
-            "Negative Prompt": ("STRING", {"default": ""}),
-        }
-    }
+    @classmethod
+    def IS_CHANGED(cls):
+        return float("NaN")
 
-# Call update_node function to initialize the node
-update_node()
+# NODE_CLASS_MAPPINGS と NODE_DISPLAY_NAME_MAPPINGS の定義
+NODE_CLASS_MAPPINGS = {
+    "ComfyUI-PromptList": ComfyUI_PromptList
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "ComfyUI-PromptList": "Prompt List"
+}
