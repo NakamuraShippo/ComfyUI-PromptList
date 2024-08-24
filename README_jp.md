@@ -37,7 +37,7 @@ Negative Prompt: ネガティブプロンプトの内容
 
 ### prompts.yamlのフォーマット  
 ~~~prompts.yaml
-test:
+prompt name:
   positive: positive prompt
   negative: negative prompt
 ...
