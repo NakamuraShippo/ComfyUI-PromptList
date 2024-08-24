@@ -38,7 +38,7 @@ Also, if you change the prompt using the same Prompt Name, it will overwrite the
 
 ### prompts.yaml format  
 ```yaml
-test:
+prompt name:
   positive: positive prompt
   negative: negative prompt
 ...
