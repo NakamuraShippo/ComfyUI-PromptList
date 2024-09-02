@@ -1,7 +1,7 @@
 """
 @author: Assistant
 @title: ComfyUI-PromptList
-@description: Custom node for managing prompts with CSV integration
+@description: Custom node to manage prompts in YAML format.|YAMLでプロンプトを管理するノード
 """
 
 from .ComfyUI_PromptList import ComfyUI_PromptList
