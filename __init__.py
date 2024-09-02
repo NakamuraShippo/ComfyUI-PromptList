@@ -1,5 +1,5 @@
 """
-@author: Assistant
+@author: NakamuraShippo
 @title: ComfyUI-PromptList
 @description: Custom node to manage prompts in YAML format.|YAMLでプロンプトを管理するノード
 """
