@@ -17,7 +17,7 @@ ComfyUI-PromptListは、[ComfyUI](https://github.com/comfyanonymous/ComfyUI)用�
 [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager)をインストールしていない場合
 1. ComfyUIのカスタムノードディレクトリに移動します。（通常は ComfyUI/custom_nodes/）
 2. このリポジトリをクローンします。  
-git clone https://github.com/yourusername/ComfyUI-PromptList.git
+`git clone https://github.com/yourusername/ComfyUI-PromptList.git`
 3. ComfyUIを再起動します。
 
 ## 使用方法
@@ -37,7 +37,7 @@ Negative Prompt: ネガティブプロンプトの内容
 
 ### prompts.yamlのフォーマット  
 ~~~prompts.yaml
-test:
+prompt name:
   positive: positive prompt
   negative: negative prompt
 ...

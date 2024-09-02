@@ -1,6 +1,8 @@
 # ComfyUI-PromptList
 ComfyUI-PromptList is a simple prompt management node for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) that outputs prompts recorded in prompts.yaml.
 
+[日本語Readme](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/README_jp.md)  
+  
 ## Features
 - Reads prompts from prompts.yaml and outputs positive and negative prompts as String format.
 - Writes new prompts to yaml.
@@ -16,7 +18,7 @@ If you have installed [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Mana
 If you have not installed [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager):
 1. Navigate to ComfyUI's custom node directory. (Usually ComfyUI/custom_nodes/)
 2. Clone this repository.  
-   git clone https://github.com/yourusername/ComfyUI-PromptList.git
+`git clone https://github.com/yourusername/ComfyUI-PromptList.git`
 3. Restart ComfyUI.
 
 ## Usage
@@ -36,7 +38,7 @@ Also, if you change the prompt using the same Prompt Name, it will overwrite the
 
 ### prompts.yaml format  
 ```yaml
-test:
+prompt name:
   positive: positive prompt
   negative: negative prompt
 ...
