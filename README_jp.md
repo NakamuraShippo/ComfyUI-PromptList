@@ -11,13 +11,13 @@ ComfyUI-PromptListは、[ComfyUI](https://github.com/comfyanonymous/ComfyUI)用�
 [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager)をインストールしている場合
 1. メインメニューのManager -> Install via Git URLの順にクリックする
 2. ウインドウ上部に出てくるテキストボックスにURLを貼り付けてOKを押す  
-   https://github.com/yourusername/ComfyUI-PromptList.git
+   https://github.com/NakamuraShippo/ComfyUI-PromptList
 3. インストールが完了したら、ComfyUIを再起動
 
 [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager)をインストールしていない場合
 1. ComfyUIのカスタムノードディレクトリに移動します。（通常は ComfyUI/custom_nodes/）
 2. このリポジトリをクローンします。  
-`git clone https://github.com/yourusername/ComfyUI-PromptList.git`
+`git clone https://github.com/NakamuraShippo/ComfyUI-PromptList`
 3. ComfyUIを再起動します。
 
 ## 使用方法
