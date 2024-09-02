@@ -50,7 +50,9 @@ If you edit, add new prompts, or make changes, please press Refresh in ComfyUI's
 2024/08/24 Initial release as it's working for now
 
 ## License
-This project is released under the MIT License.
+This project is released under the MIT License. See the [LICENSE](LICENSE.txt) file for details.  
+You are free to use, modify, and distribute this software, both for private and commercial purposes, provided that you include the original  
+copyright notice and disclaimer.
 
 ## Other
 Bug reports and feature requests are welcome through any available contact method.
