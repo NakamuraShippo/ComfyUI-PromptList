@@ -77,12 +77,12 @@ class ComfyUI_PromptList:
             # Return existing prompt from YAML
             prompt = self.data.get(selection, {})
             return (prompt.get("positive", ""), prompt.get("negative", ""))
-        
+
         # Default return if no selection or custom input
         return ("", "")
 
     @classmethod
-    def IS_CHANGED(cls):
+    def IS_CHANGED(cls, *args, **kwargs):
         return float("NaN")
 
 # NODE_CLASS_MAPPINGS と NODE_DISPLAY_NAME_MAPPINGS の定義
