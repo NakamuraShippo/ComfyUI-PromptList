@@ -12,13 +12,13 @@ ComfyUI-PromptList is a simple prompt management node for [ComfyUI](https://gith
 If you have installed [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager):
 1. Click Manager -> Install via Git URL in the main menu.
 2. Paste the URL into the text box that appears at the top of the window and press OK.  
-   https://github.com/yourusername/ComfyUI-PromptList.git
+   https://github.com/NakamuraShippo/ComfyUI-PromptList
 3. After installation is complete, restart ComfyUI.
 
 If you have not installed [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager):
 1. Navigate to ComfyUI's custom node directory. (Usually ComfyUI/custom_nodes/)
 2. Clone this repository.  
-`git clone https://github.com/yourusername/ComfyUI-PromptList.git`
+`git clone https://github.com/NakamuraShippo/ComfyUI-PromptList`
 3. Restart ComfyUI.
 
 ## Usage
