@@ -56,9 +56,9 @@ https://docs.google.com/spreadsheets/d/1MMD5LfSQD16vjDk7bW-WIL0rkRHASl7SBYt5JAil
 6. ご自身のgoogleドライブにprompts.yamlが出力されます。
 
 #### スプレッドシートの記述方法
-A列の「template name」のセル = prompt name  
-B列の「positive」の右隣のセル = positive prompt  
-B列の「negative」の右隣のセル = negative prompt  
+「prompt name」のセル = prompt name  
+「positive」の右隣のセル = positive prompt  
+「negative」の右隣のセル = negative prompt  
 をそれぞれ入力します。  
   
 登録する項目を増やしたい時はオートフィルをご利用ください。  
