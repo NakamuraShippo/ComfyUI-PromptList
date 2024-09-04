@@ -42,7 +42,10 @@ prompt name:
   positive: positive prompt
   negative: negative prompt
 ...
-```
+```  
+
+https://docs.google.com/spreadsheets/d/15_Zcr3VUkQZRqy7sd6jgMObB-DufQkPSWTFYUVhsQDw/edit?usp=sharing  
+
    
 ## Notes
 The prompt list is saved in the prompts.yaml file.
