@@ -43,6 +43,30 @@ prompt name:
 ...
 ~~~
    
+
+### prompts.yamlの編集用スプレッドシートを用意しました。
+https://docs.google.com/spreadsheets/d/1MMD5LfSQD16vjDk7bW-WIL0rkRHASl7SBYt5JAilsg0/edit?gid=0#gid=0
+
+#### スプレッドシートを利用する前準備
+1. ファイル -> コピー作成 -> 好きなファイル名に編集し「コピーを作成」
+2. しばらく待つとヘルプの右側に「エクスポート」が現れるので、エクスポート -> YAMLとしてエクスポート
+3. 認証が必要ですウインドウ -> OK
+4. googleアカウントを選択してログイン(警告が出た場合:詳細を表示 -> 安全ではないページに移動 -> 許可)  
+5. しばらく待つとヘルプの右側に「エクスポート」が現れるので、エクスポート -> YAMLとしてエクスポート -> エクスポート完了
+6. ご自身のgoogleドライブにprompts.yamlが出力されます。
+
+#### スプレッドシートの記述方法
+A列の「template name」のセル = prompt name  
+B列の「positive」の右隣のセル = positive prompt  
+B列の「negative」の右隣のセル = negative prompt  
+をそれぞれ入力します。  
+  
+登録する項目を増やしたい時はオートフィルをご利用ください。  
+![autofill](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/autofill.gif)
+
+*注意*  
+B列のセルは変更しないでください。  
+
 ## 注意事項
 
 プロンプトリストはprompts.yamlファイルに保存されます。
