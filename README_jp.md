@@ -35,7 +35,7 @@ Negative Prompt: ネガティブプロンプトの内容
 入力したプロンプト名とプロンプトはprompts.yamlに保存されます。  
 また、同名のPrompt Nameを使用してプロンプトを変更した場合はprompts.yaml内のプロンプトを上書きします。 
 
-### prompts.yamlのフォーマット  
+## prompts.yamlのフォーマット  
 ~~~prompts.yaml
 prompt name:
   positive: positive prompt
@@ -52,14 +52,13 @@ https://docs.google.com/spreadsheets/d/1MMD5LfSQD16vjDk7bW-WIL0rkRHASl7SBYt5JAil
 2. しばらく待つとヘルプの右側に「エクスポート」が現れるので、エクスポート -> YAMLとしてエクスポート
 3. 認証が必要ですウインドウ -> OK
 4. googleアカウントを選択してログイン(警告が出た場合:詳細を表示 -> 安全ではないページに移動 -> 許可)  
-5. しばらく待つとヘルプの右側に「エクスポート」が現れるので、エクスポート -> YAMLとしてエクスポート -> エクスポート完了
-6. ご自身のgoogleドライブにprompts.yamlが出力されます。
 
 #### スプレッドシートの記述方法
+![spreadsheets](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/spreadsheets.png)
 「prompt name」のセル = prompt name  
 「positive」の右隣のセル = positive prompt  
 「negative」の右隣のセル = negative prompt  
-をそれぞれ入力します。  
+をそれぞれ入力します。(A列とC列の白色セルが入力可能なセルとなっています)  
   
 登録する項目を増やしたい時はオートフィルをご利用ください。  
 ![autofill](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/autofill.gif)
@@ -67,12 +66,17 @@ https://docs.google.com/spreadsheets/d/1MMD5LfSQD16vjDk7bW-WIL0rkRHASl7SBYt5JAil
 *注意*  
 B列のセルは変更しないでください。  
 
+#### エクスポート方法
+1. しばらく待つとヘルプの右側に「エクスポート」が現れるので、エクスポート -> YAMLとしてエクスポート -> エクスポート完了
+2. ご自身のgoogleドライブにprompts.yamlが出力されます。
+
 ## 注意事項
 
 プロンプトリストはprompts.yamlファイルに保存されます。
 編集したり新しいプロンプトを追加または編集を行った場合、変更を反映させる為にComfyUIのメインメニューにあるRefreshを押してください。
 
 ## アップデート履歴
+2024/09/05 prompts.yamlを任意のフォルダで管理できるようにしました。編集用スプレッドシートも公開。
 2024/08/24 とりあえず動いてるので公開
 
 ## ライセンス
