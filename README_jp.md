@@ -43,9 +43,8 @@ prompt name:
 ...
 ~~~
    
-
-### prompts.yamlの編集用スプレッドシートを用意しました。
-https://docs.google.com/spreadsheets/d/1MMD5LfSQD16vjDk7bW-WIL0rkRHASl7SBYt5JAilsg0/edit?gid=0#gid=0
+  
+### [prompts.yaml編集用スプレッドシート](https://docs.google.com/spreadsheets/d/1f4-kQ2YnETfa_peiRiskK3abuR4LqCTHxDwrpVqCYpY/edit?usp=sharing)を用意しました。
 
 #### スプレッドシートを利用する前準備
 1. ファイル -> コピー作成 -> 好きなファイル名に編集し「コピーを作成」
@@ -64,12 +63,21 @@ https://docs.google.com/spreadsheets/d/1MMD5LfSQD16vjDk7bW-WIL0rkRHASl7SBYt5JAil
 ![autofill](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/autofill.gif)
 
 *注意*  
-B列のセルは変更しないでください。  
+グレーで塗りつぶされたセルは編集しないでください。  
 
-#### エクスポート方法
-1. しばらく待つとヘルプの右側に「エクスポート」が現れるので、エクスポート -> YAMLとしてエクスポート -> エクスポート完了
+#### YAMLのエクスポート
+1. しばらく待つとヘルプの右側に「エクスポート」が現れるので、エクスポート/インポート -> エクスポート -> エクスポート完了
 2. ご自身のgoogleドライブにprompts.yamlが出力されます。
 
+#### YAMLのインポート
+1. スプレッドシートと同じフォルダ内にprompts.yamlを配置
+2. エクスポート/インポート -> インポート -> インポート完了
+
+#### 推奨する使い方
+以下の設定を行うとyamlのエクスポートを行うと楽できると思います。
+1. googleドライブをインストール
+2. prompts.yamlをconfig.jsonで指定したフォルダ内にシンボリックリンクを設定する
+  
 ## 注意事項
 
 プロンプトリストはprompts.yamlファイルに保存されます。
