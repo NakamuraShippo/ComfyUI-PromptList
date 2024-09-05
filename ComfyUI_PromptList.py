@@ -1,6 +1,5 @@
 import yaml
 import os
-import json
 import folder_paths
 from collections import OrderedDict
 
@@ -21,20 +20,9 @@ def dict_representer(dumper, data):
 
 OrderedDumper.add_representer(OrderedDict, dict_representer)
 
-def get_config():
-    config_path = os.path.join(folder_paths.base_path, "custom_nodes", "ComfyUI-PromptList", "config.json")
-    if os.path.exists(config_path):
-        with open(config_path, 'r') as config_file:
-            return json.load(config_file)
-    return {"prompts_yaml_path": os.path.join(folder_paths.base_path, "custom_nodes", "ComfyUI-PromptList", "prompts.yaml")}
-
-def get_prompts_yaml_path():
-    config = get_config()
-    return config.get("prompts_yaml_path")
-
 class ComfyUI_PromptList:
     def __init__(self):
-        self.yaml_path = get_prompts_yaml_path()
+        self.yaml_path = os.path.join(folder_paths.base_path, "custom_nodes", "ComfyUI-PromptList", "prompts.yaml")
         self.data = self.load_yaml()
 
     @classmethod
@@ -42,9 +30,9 @@ class ComfyUI_PromptList:
         return {
             "required": {
                 "selection": (cls.get_prompt_list(),),
-                "Prompt Name": ("STRING", {"default": ""}),
-                "Positive Prompt": ("STRING", {"default": ""}),
-                "Negative Prompt": ("STRING", {"default": ""}),
+                "Prompt Name": ("STRING", {"multiline": True}),
+                "Positive Prompt": ("STRING", {"multiline": True}),
+                "Negative Prompt": ("STRING", {"multiline": True}),
             }
         }
 
@@ -89,7 +77,7 @@ class ComfyUI_PromptList:
             # Return existing prompt from YAML
             prompt = self.data.get(selection, {})
             return (prompt.get("positive", ""), prompt.get("negative", ""))
-        
+
         # Default return if no selection or custom input
         return ("", "")
 
