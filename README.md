@@ -44,7 +44,7 @@ If you change a prompt using the same Prompt Name, it will overwrite the prompt 
 4. Select your Google account and log in (if a warning appears: Advanced -> Go to prompt.yaml export (unsafe) -> Allow)
 
 #### How to fill in the spreadsheet
-![spreadsheets](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/spreadsheets.png)
+![spreadsheets](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/spreadsheets.png)  
 "prompt name" cell = prompt name  
 Cell to the right of "positive" = positive prompt  
 Cell to the right of "negative" = negative prompt  
