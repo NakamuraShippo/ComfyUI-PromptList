@@ -34,15 +34,6 @@ Negative Prompt: ネガティブプロンプトの内容
   
 入力したプロンプト名とプロンプトはprompts.yamlに保存されます。  
 また、同名のPrompt Nameを使用してプロンプトを変更した場合はprompts.yaml内のプロンプトを上書きします。 
-
-## prompts.yamlのフォーマット  
-~~~prompts.yaml
-prompt name:
-  positive: positive prompt
-  negative: negative prompt
-...
-~~~
-   
   
 ### [prompts.yaml編集用スプレッドシート](https://docs.google.com/spreadsheets/d/1f4-kQ2YnETfa_peiRiskK3abuR4LqCTHxDwrpVqCYpY/edit?usp=sharing)を用意しました。
 
@@ -74,9 +65,27 @@ prompt name:
 2. エクスポート/インポート -> インポート -> インポート完了
 
 #### 推奨する使い方
-以下の設定を行うとyamlのエクスポートを行うと楽できると思います。
+以下の設定をした上でyamlのエクスポートを行うとファイルの移動の手間がなく楽が出来ますよ。
 1. googleドライブをインストール
-2. prompts.yamlをconfig.jsonで指定したフォルダ内にシンボリックリンクを設定する
+2. prompts.yamlを当カスタムノードのフォルダ内にシンボリックリンクを設定する
+3. googleドライブ内のprompts.yamlが更新されると10秒前後でデスクトップ内のファイルも同期されます。
+4. やったぜ。
+
+##### シンボリックリンクについて(知らない人向け)
+ショートカットのようなものですが、決定的な違いは実体があるかのように振舞う事ができることです。
+コマンドプロンプトを開き、リンクを皆さんの環境に合った箇所に書き換えて実行してください。
+~~~
+windows
+mklink 当カスタムノードのprompts.yamlのパス GoogleDrive内のprompts.yamlファイルのパス
+
+Mac/Linux
+ln -s GoogleDrive内のprompts.yamlファイルのパス 当カスタムノードのprompts.yamlのパス
+
+例
+mklink E:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PromptList\prompts.yaml Y:\マイドライブ\ComfyUI-PromptList\prompts.yaml
+~~~
+windowsの場合はpowertoysという公式のアプリを導入すると右クリックで簡単に設定できたりもします。
+探してみてね
   
 ## 注意事項
 
