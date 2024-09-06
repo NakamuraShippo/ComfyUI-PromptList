@@ -32,7 +32,8 @@ Prompt Name: 新しいプロンプト名または更新するプロンプト名
 Positive Prompt: ポジティブプロンプトの内容  
 Negative Prompt: ネガティブプロンプトの内容  
   
-入力したプロンプト名とプロンプトはprompts.yamlに保存されます。  
+入力したプロンプト名とプロンプトはComfyUI\user\PromptList\prompts.yamlに保存されます。  
+prompts.yamlが見つからない場合は空のprompts.yamlが自動で作成されます。
 また、同名のPrompt Nameを使用してプロンプトを変更した場合はprompts.yaml内のプロンプトを上書きします。 
   
 ### [prompts.yaml編集用スプレッドシート](https://docs.google.com/spreadsheets/d/1f4-kQ2YnETfa_peiRiskK3abuR4LqCTHxDwrpVqCYpY/edit?usp=sharing)を用意しました。
@@ -77,13 +78,13 @@ Negative Prompt: ネガティブプロンプトの内容
 コマンドプロンプト(ターミナル)を開き、リンクを皆さんの環境に合った箇所に書き換えて実行してください。
 ~~~
 windows
-mklink 当カスタムノードのprompts.yamlのパス GoogleDrive内のprompts.yamlファイルのパス
+mklink ComfyUI\user\PromptList\prompts.yamlのパス GoogleDrive内のprompts.yamlファイルのパス
 
 Mac/Linux
-ln -s GoogleDrive内のprompts.yamlファイルのパス 当カスタムノードのprompts.yamlのパス
+ln -s GoogleDrive内のprompts.yamlファイルのパス ComfyUI\user\PromptList\prompts.yaml
 
 例
-mklink E:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PromptList\prompts.yaml Y:\マイドライブ\ComfyUI-PromptList\prompts.yaml
+mklink E:\ComfyUI_windows_portable\ComfyUI\user\PromptList\prompts.yaml Y:\マイドライブ\ComfyUI-PromptList\prompts.yaml
 ~~~
 windowsの場合はpowertoysという公式のアプリを導入すると右クリックで簡単に設定できたりもします。
 大変便利なので探してインストールしてみてね。
