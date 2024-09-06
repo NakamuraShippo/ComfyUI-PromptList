@@ -87,7 +87,8 @@ mklink E:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PromptList\promp
 ~~~
 windowsの場合はpowertoysという公式のアプリを導入すると右クリックで簡単に設定できたりもします。
 大変便利なので探してインストールしてみてね。
-  
+## ワークフロー
+![サンプルワークフロー](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/PromptListWorkflow.png)
 ## 注意事項
 
 プロンプトリストはprompts.yamlファイルに保存されます。
