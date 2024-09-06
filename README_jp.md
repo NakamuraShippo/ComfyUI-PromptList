@@ -73,7 +73,7 @@ Negative Prompt: ネガティブプロンプトの内容
 
 ##### シンボリックリンクについて(知らない人向け)
 ショートカットのようなものですが、決定的な違いは実体があるかのように振舞う事ができることです。
-コマンドプロンプトを開き、リンクを皆さんの環境に合った箇所に書き換えて実行してください。
+コマンドプロンプト(ターミナル)を開き、リンクを皆さんの環境に合った箇所に書き換えて実行してください。
 ~~~
 windows
 mklink 当カスタムノードのprompts.yamlのパス GoogleDrive内のprompts.yamlファイルのパス
@@ -85,7 +85,7 @@ ln -s GoogleDrive内のprompts.yamlファイルのパス 当カスタムノー�
 mklink E:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PromptList\prompts.yaml Y:\マイドライブ\ComfyUI-PromptList\prompts.yaml
 ~~~
 windowsの場合はpowertoysという公式のアプリを導入すると右クリックで簡単に設定できたりもします。
-探してみてね
+大変便利なので探してインストールしてみてね。
   
 ## 注意事項
 
