@@ -32,7 +32,8 @@ Prompt Name: New prompt name or name of the prompt to update
 Positive Prompt: Content of the positive prompt  
 Negative Prompt: Content of the negative prompt  
   
-The entered prompt name and prompts will be saved in prompts.yaml.  
+The entered prompt name and prompts will be saved in ComfyUI\user\PromptList\prompts.yaml.  
+If prompts.yaml is not found, an empty prompts.yaml will be automatically created.  
 If you change a prompt using the same Prompt Name, it will overwrite the prompt in prompts.yaml.
 
 ### We have prepared a [spreadsheet for editing prompts.yaml](https://docs.google.com/spreadsheets/d/1TxATrMXC1X1iSBRD4yFQZoOOwwNVz6irTSpnyv2T1ec/edit?usp=sharing).
@@ -76,10 +77,9 @@ It's similar to a shortcut, but the crucial difference is that it can behave as 
 Open the command prompt and execute the following command, replacing the links with the appropriate locations for your environment:
 ~~~
 Windows
-mklink path_to_prompts.yaml_in_this_custom_node path_to_prompts.yaml_file_in_GoogleDrive
-
+mklink Full_path_of_ComfyUI\user\PromptList\prompts.yaml Path_to_the_prompts.yaml_file_in_GoogleDrive
 Mac/Linux
-ln -s path_to_prompts.yaml_file_in_GoogleDrive path_to_prompts.yaml_in_this_custom_node
+ln -s Path_to_the_prompts.yaml_file_in_GoogleDrive Full_path_of_ComfyUI\user\PromptList\prompts.yaml
 
 Example
 mklink E:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PromptList\prompts.yaml Y:\My Drive\ComfyUI-PromptList\prompts.yaml
