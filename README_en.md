@@ -35,6 +35,7 @@ Negative Prompt: Content of the negative prompt
 The entered prompt name and prompts will be saved in prompts.yaml.  
 If you change a prompt using the same Prompt Name, it will overwrite the prompt in prompts.yaml.
 
+<<<<<<< HEAD
 ### We have prepared a [spreadsheet for editing prompts.yaml](https://docs.google.com/spreadsheets/d/1TxATrMXC1X1iSBRD4yFQZoOOwwNVz6irTSpnyv2T1ec/edit?usp=sharing).
 
 #### Preparation before using the spreadsheet
@@ -42,6 +43,15 @@ If you change a prompt using the same Prompt Name, it will overwrite the prompt 
 2. After a while, "Export" will appear to the right of Help. Click Export -> Export as YAML
 3. Authentication required window -> OK
 4. Select your Google account and log in (if a warning appears: Advanced -> Go to prompt.yaml export (unsafe) -> Allow)
+=======
+### We have prepared a [spreadsheet for editing prompts.yaml](https://docs.google.com/spreadsheets/d/1f4-kQ2YnETfa_peiRiskK3abuR4LqCTHxDwrpVqCYpY/edit?usp=sharing).
+
+#### Preparation before using the spreadsheet
+1. File -> Make a copy -> Edit to your preferred file name and click "Create copy"
+2. After a while, "Export" will appear to the right of Help. Click Export -> Export as YAML
+3. Authentication required window -> OK
+4. Select your Google account and log in (if a warning appears: Show details -> Move to unsafe page -> Allow)
+>>>>>>> aff35ca03de77cf5e7f6882b9993bd4c54ff2734
 
 #### How to fill in the spreadsheet
 ![spreadsheets](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/spreadsheets.png)
@@ -93,8 +103,13 @@ The prompt list is saved in the prompts.yaml file.
 If you edit, add new prompts, or make changes, please press Refresh in the ComfyUI main menu to reflect the changes.
 
 ## Update History
+<<<<<<< HEAD
 2024/09/06 1.2.0 Node input field is now multiline. Edit spreadsheet is now available.
 2024/08/24 1.0.0 Initial public release as it's working for now
+=======
+2024/09/05 Made it possible to manage prompts.yaml in any folder. Editing spreadsheet also published.
+2024/08/24 Initial public release as it's working for now
+>>>>>>> aff35ca03de77cf5e7f6882b9993bd4c54ff2734
 
 ## License
 This project is released under the MIT License. For details, please refer to the [LICENSE.txt](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/License.txt) file.  

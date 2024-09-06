@@ -1,7 +1,11 @@
 [project]
 name = "comfyui-promptlist"
 description = "Custom node to manage prompts in YAML format."
+<<<<<<< HEAD
 version = "1.2.0"
+=======
+version = "1.1.2"
+>>>>>>> aff35ca03de77cf5e7f6882b9993bd4c54ff2734
 license = { file = "LICENSE.txt" }
 
 [project.urls]
