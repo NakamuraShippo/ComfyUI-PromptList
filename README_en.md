@@ -93,8 +93,8 @@ The prompt list is saved in the prompts.yaml file.
 If you edit, add new prompts, or make changes, please press Refresh in the ComfyUI main menu to reflect the changes.
 
 ## Update History
-2024/09/05 Made it possible to manage prompts.yaml in any folder. Editing spreadsheet also published.
-2024/08/24 Initial public release as it's working for now
+2024/09/06 1.2.0 Node input field is now multiline. Edit spreadsheet is now available.
+2024/08/24 1.0.0 Initial public release as it's working for now
 
 ## License
 This project is released under the MIT License. For details, please refer to the [LICENSE.txt](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/License.txt) file.  
