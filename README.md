@@ -43,14 +43,6 @@ If you change a prompt using the same Prompt Name, it will overwrite the prompt 
 3. Authentication required window -> OK
 4. Select your Google account and log in (if a warning appears: Advanced -> Go to prompt.yaml export (unsafe) -> Allow)
 
-### We have prepared a [spreadsheet for editing prompts.yaml](https://docs.google.com/spreadsheets/d/1f4-kQ2YnETfa_peiRiskK3abuR4LqCTHxDwrpVqCYpY/edit?usp=sharing).
-
-#### Preparation before using the spreadsheet
-1. File -> Make a copy -> Edit to your preferred file name and click "Create copy"
-2. After a while, "Export" will appear to the right of Help. Click Export -> Export as YAML
-3. Authentication required window -> OK
-4. Select your Google account and log in (if a warning appears: Show details -> Move to unsafe page -> Allow)
-
 #### How to fill in the spreadsheet
 ![spreadsheets](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/spreadsheets.png)
 "prompt name" cell = prompt name  
