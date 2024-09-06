@@ -53,9 +53,9 @@ class ComfyUI_PromptList:
         return {
             "required": {
                 "selection": (items,),
-                "Prompt Name": ("STRING", {"default": ""}),
-                "Positive Prompt": ("STRING", {"default": ""}),
-                "Negative Prompt": ("STRING", {"default": ""}),
+                "Prompt Name": ("STRING", {"multiline": True}),
+                "Positive Prompt": ("STRING", {"multiline": True}),
+                "Negative Prompt": ("STRING", {"multiline": True}),
             }
         }
 
