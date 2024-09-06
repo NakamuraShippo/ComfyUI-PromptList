@@ -87,12 +87,14 @@ mklink E:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PromptList\promp
 ~~~
 windowsの場合はpowertoysという公式のアプリを導入すると右クリックで簡単に設定できたりもします。
 大変便利なので探してインストールしてみてね。
-## ワークフロー
-![サンプルワークフロー](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/PromptListWorkflow.png)
+
 ## 注意事項
 
 プロンプトリストはprompts.yamlファイルに保存されます。
 編集したり新しいプロンプトを追加または編集を行った場合、変更を反映させる為にComfyUIのメインメニューにあるRefreshを押してください。
+
+## ワークフロー
+![サンプルワークフロー](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/PromptListWorkflow.png)
 
 ## アップデート履歴
 2024/09/06 1.2.0 ノード入力欄をmultilineに修正。編集用スプレッドシートを公開。  
