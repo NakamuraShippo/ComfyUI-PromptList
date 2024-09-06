@@ -92,6 +92,9 @@ Give it a try!
 The prompt list is saved in the prompts.yaml file.
 If you edit, add new prompts, or make changes, please press Refresh in the ComfyUI main menu to reflect the changes.
 
+## Workflow
+![sample](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/PromptListWorkflow.png)
+
 ## Update History
 2024/09/06 1.2.0 Node input field is now multiline. Edit spreadsheet is now available.  
 2024/08/24 1.0.0 Initial public release as it's working for now  
