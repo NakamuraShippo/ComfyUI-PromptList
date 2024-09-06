@@ -61,24 +61,28 @@ class ComfyUI_PromptList:
         positive_prompt = kwargs.get("Positive Prompt", "")
         negative_prompt = kwargs.get("Negative Prompt", "")
 
-        if prompt_name and positive_prompt and negative_prompt:
-            # Update or add new prompt while preserving order
+        if prompt_name:
+            # プロンプト名が入力されている場合の処理
             if prompt_name in self.data:
-                self.data[prompt_name]["positive"] = positive_prompt
-                self.data[prompt_name]["negative"] = negative_prompt
+                # 既存のプロンプトを更新
+                if positive_prompt:
+                    self.data[prompt_name]["positive"] = positive_prompt
+                if negative_prompt:
+                    self.data[prompt_name]["negative"] = negative_prompt
             else:
+                # 新しいプロンプトを作成
                 self.data[prompt_name] = OrderedDict([
-                    ("positive", positive_prompt),
-                    ("negative", negative_prompt)
+                    ("positive", positive_prompt or ""),
+                    ("negative", negative_prompt or "")
                 ])
             self.save_yaml()
-            return (positive_prompt, negative_prompt)
+            return (self.data[prompt_name]["positive"], self.data[prompt_name]["negative"])
         elif selection:
-            # Return existing prompt from YAML
+            # 既存のプロンプトを選択した場合の処理
             prompt = self.data.get(selection, {})
             return (prompt.get("positive", ""), prompt.get("negative", ""))
-
-        # Default return if no selection or custom input
+        
+        # デフォルトの戻り値（何も選択されず、新規入力もない場合）
         return ("", "")
 
     @classmethod
