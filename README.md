@@ -1,6 +1,6 @@
 # ComfyUI-PromptList
 ComfyUI-PromptList is a simple prompt management node for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) that outputs prompts recorded in prompts.yaml.  
-[日本語はこちら](https://github.com/NakamuraShippo/ComfyUI-PromptList/README_jp.md)
+[日本語はこちら](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/README_jp.md)
 ## Features
 
 - Loads prompts from prompts.yaml and outputs positive and negative prompts in String format.
