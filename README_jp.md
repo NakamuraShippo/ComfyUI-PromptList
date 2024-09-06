@@ -34,22 +34,76 @@ Negative Prompt: ネガティブプロンプトの内容
   
 入力したプロンプト名とプロンプトはprompts.yamlに保存されます。  
 また、同名のPrompt Nameを使用してプロンプトを変更した場合はprompts.yaml内のプロンプトを上書きします。 
+  
+### [prompts.yaml編集用スプレッドシート](https://docs.google.com/spreadsheets/d/1f4-kQ2YnETfa_peiRiskK3abuR4LqCTHxDwrpVqCYpY/edit?usp=sharing)を用意しました。
 
-### prompts.yamlのフォーマット  
-~~~prompts.yaml
-prompt name:
-  positive: positive prompt
-  negative: negative prompt
-...
+#### スプレッドシートを利用する前準備
+1. ファイル -> コピー作成 -> 好きなファイル名に編集し「コピーを作成」
+2. しばらく待つとヘルプの右側に「エクスポート」が現れるので、エクスポート -> YAMLとしてエクスポート
+3. 認証が必要ですウインドウ -> OK
+4. googleアカウントを選択してログイン(警告が出た場合:詳細を表示 -> 安全ではないページに移動 -> 許可)  
+
+#### スプレッドシートの記述方法
+![spreadsheets](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/spreadsheets.png)
+「prompt name」のセル = prompt name  
+「positive」の右隣のセル = positive prompt  
+「negative」の右隣のセル = negative prompt  
+をそれぞれ入力します。(A列とC列の白色セルが入力可能なセルとなっています)  
+  
+登録する項目を増やしたい時はオートフィルをご利用ください。  
+![autofill](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/images/autofill.gif)
+
+*注意*  
+グレーで塗りつぶされたセルは編集しないでください。  
+
+#### YAMLのエクスポート
+<<<<<<< HEAD
+1. しばらく待つとヘルプの右側に「エクスポート/インポート」が現れるので、エクスポート/インポート -> エクスポート -> エクスポート完了
+=======
+1. しばらく待つとヘルプの右側に「エクスポート」が現れるので、エクスポート/インポート -> エクスポート -> エクスポート完了
+>>>>>>> aff35ca03de77cf5e7f6882b9993bd4c54ff2734
+2. ご自身のgoogleドライブにprompts.yamlが出力されます。
+
+#### YAMLのインポート
+1. スプレッドシートと同じフォルダ内にprompts.yamlを配置
+2. エクスポート/インポート -> インポート -> インポート完了
+
+#### 推奨する使い方
+以下の設定をした上でyamlのエクスポートを行うとファイルの移動の手間がなく楽が出来ますよ。
+1. googleドライブをインストール
+2. prompts.yamlを当カスタムノードのフォルダ内にシンボリックリンクを設定する
+3. googleドライブ内のprompts.yamlが更新されると10秒前後でデスクトップ内のファイルも同期されます。
+4. やったぜ。
+
+##### シンボリックリンクについて(知らない人向け)
+ショートカットのようなものですが、決定的な違いは実体があるかのように振舞う事ができることです。
+コマンドプロンプト(ターミナル)を開き、リンクを皆さんの環境に合った箇所に書き換えて実行してください。
 ~~~
-   
+windows
+mklink 当カスタムノードのprompts.yamlのパス GoogleDrive内のprompts.yamlファイルのパス
+
+Mac/Linux
+ln -s GoogleDrive内のprompts.yamlファイルのパス 当カスタムノードのprompts.yamlのパス
+
+例
+mklink E:\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PromptList\prompts.yaml Y:\マイドライブ\ComfyUI-PromptList\prompts.yaml
+~~~
+windowsの場合はpowertoysという公式のアプリを導入すると右クリックで簡単に設定できたりもします。
+大変便利なので探してインストールしてみてね。
+  
 ## 注意事項
 
 プロンプトリストはprompts.yamlファイルに保存されます。
 編集したり新しいプロンプトを追加または編集を行った場合、変更を反映させる為にComfyUIのメインメニューにあるRefreshを押してください。
 
 ## アップデート履歴
+<<<<<<< HEAD
+2024/09/06 1.2.0 ノード入力欄をmultilineに修正。編集用スプレッドシートを公開。
+2024/08/24 1.0.0 とりあえず動いてるので公開
+=======
+2024/09/05 prompts.yamlを任意のフォルダで管理できるようにしました。編集用スプレッドシートも公開。
 2024/08/24 とりあえず動いてるので公開
+>>>>>>> aff35ca03de77cf5e7f6882b9993bd4c54ff2734
 
 ## ライセンス
 このプロジェクトは MIT ライセンスに基づいてリリースされています。詳細については、[LICENSE.txt](https://github.com/NakamuraShippo/ComfyUI-PromptList/blob/main/License.txt)ファイルを参照してください。  
