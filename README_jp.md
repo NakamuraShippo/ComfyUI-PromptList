@@ -35,7 +35,19 @@ Negative Prompt: ネガティブプロンプトの内容
 入力したプロンプト名とプロンプトはComfyUI\user\PromptList\prompts.yamlに保存されます。  
 prompts.yamlが見つからない場合は空のprompts.yamlが自動で作成されます。  
 また、同名のPrompt Nameを使用してプロンプトを変更した場合はprompts.yaml内のプロンプトを上書きします。 
+
+#### prompts.yamlのフォーマット
+~~~
+#prompts.yaml
+prompt_name_1:
+ positive: Positive prompt content
+ negative: Negative prompt content
+prompt_name_2:
+ positive: Another positive prompt
+ negative: Another negative prompt
+~~~
   
+
 ### [prompts.yaml編集用スプレッドシート](https://docs.google.com/spreadsheets/d/1f4-kQ2YnETfa_peiRiskK3abuR4LqCTHxDwrpVqCYpY/edit?usp=sharing)を用意しました。
 
 #### スプレッドシートを利用する前準備
