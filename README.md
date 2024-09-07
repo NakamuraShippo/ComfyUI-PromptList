@@ -36,6 +36,17 @@ The entered prompt name and prompts will be saved in ComfyUI\user\PromptList\pro
 If prompts.yaml is not found, an empty prompts.yaml will be automatically created.  
 If you change a prompt using the same Prompt Name, it will overwrite the prompt in prompts.yaml.
 
+#### prompts.yaml format
+~~~
+#prompts.yaml
+  prompt_name_1:
+    positive: Positive prompt content
+    negative: Negative prompt content
+  prompt_name_2:
+    positive: Another positive prompt
+    negative: Another negative prompt
+~~~
+
 ### We have prepared a [spreadsheet for editing prompts.yaml](https://docs.google.com/spreadsheets/d/1TxATrMXC1X1iSBRD4yFQZoOOwwNVz6irTSpnyv2T1ec/edit?usp=sharing).
 
 #### Preparation before using the spreadsheet
