@@ -8,6 +8,6 @@ license = { file = "LICENSE.txt" }
 Repository = "https://github.com/NakamuraShippo/ComfyUI-PromptList"
 
 [tool.comfy]
-PublisherId = "@nakamurashippo"
+PublisherId = "nakamurashippo"
 DisplayName = "ComfyUI-PromptList"
 Icon = ""
