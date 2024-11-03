@@ -3,7 +3,7 @@ name = "comfyui-promptlist"
 description = "Custom node to manage prompts in YAML format."
 version = "1.2.2"
 license = { file = "LICENSE.txt" }
-
+ 
 [project.urls]
 Repository = "https://github.com/NakamuraShippo/ComfyUI-PromptList"
 
